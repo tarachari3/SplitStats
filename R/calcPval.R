@@ -61,7 +61,7 @@ getSplits <- function(labels, matrix) {
   cl <- basiliskStart(env4)
   cycSplit <- basiliskRun(cl, function() {
     path <- system.file("splitFuncs", package = 'SplitStats')
-    X <- reticulate::import_from_path("splitFuncs", path = path)
+    X <- reticulate::import_from_path("splitspy", path = path)
     X$calcSplits(labels, matrix)
   })
   basiliskStop(cl)
@@ -85,9 +85,9 @@ getSplits <- function(labels, matrix) {
 #' @importFrom basilisk basiliskStart basiliskRun basiliskStop
 getSplitDist <- function(labels, queryLabs, refLabs, splits) {
 
-  cl <- basiliskStart(env)
+  cl <- basiliskStart(env4)
   cycSplit <- basiliskRun(cl, function() {
-    X <- reticulate::import("splitFuncs")
+    X <- reticulate::import("splitspy")
     X$splitDists(labels, queryLabs, refLabs, splits)
   })
   basiliskStop(cl)
@@ -113,9 +113,9 @@ getSplitDist <- function(labels, queryLabs, refLabs, splits) {
 #' @importFrom basilisk basiliskStart basiliskRun basiliskStop
 getSplitVis <- function(labels,cycle,splits,matrix,outfilePhylo,outfileNexus) {
 
-  cl <- basiliskStart(env)
+  cl <- basiliskStart(env4)
   cycSplit <- basiliskRun(cl, function() {
-    X <- reticulate::import("splitFuncs")
+    X <- reticulate::import("splitspy")
     X$makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus)
   })
   basiliskStop(cl)
