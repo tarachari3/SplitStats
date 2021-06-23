@@ -17,6 +17,3 @@ List of observations in cycle ordering and split objects
 \description{
 Get splits from NNet generated split network
 }
-\author{
-Tara Chari
-}
