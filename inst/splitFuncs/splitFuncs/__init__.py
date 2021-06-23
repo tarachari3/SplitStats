@@ -10,8 +10,8 @@ import splitspy.nnet.nnet_algo as nnet_algorithm
 
 import scipy.stats as stats
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+#import seaborn as sns
+#import pandas as pd
 import numpy as np
 from itertools import compress
 from subprocess import Popen

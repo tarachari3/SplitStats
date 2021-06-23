@@ -43,3 +43,28 @@ calcSplitVotPval2 <- function(featureMat,labels, queryLabs) {
   }
   return(pvals)
 }
+
+
+#' Get splits from NNet generated split network
+#'
+#'
+#'
+#' @return List of observations in cycle ordering and split objects
+#' @author Tara Chari
+#'
+#' @param labels Vector of observation labels (e.g. member names)
+#' @param matrix (Square) Distance matrix with no labels (unnamed)
+#' @export
+#' @importFrom reticulate import
+#' @importFrom basilisk basiliskStart basiliskRun basiliskStop
+getSplits <- function(labels, matrix) {
+
+  cl <- basiliskStart(env)
+  cycSplit <- basiliskRun(cl, function() {
+    X <- reticulate::import("splitFuncs/splitFuncs")
+    X$calcSplits(labels, matrix)
+  })
+  basiliskStop(cl)
+
+  return(cycSplit)
+}
