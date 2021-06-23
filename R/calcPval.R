@@ -58,9 +58,10 @@ calcSplitVotPval <- function(featureMat,labels, queryLabs) {
 #' @importFrom basilisk basiliskStart basiliskRun basiliskStop
 getSplits <- function(labels, matrix) {
 
-  cl <- basiliskStart(env)
+  cl <- basiliskStart(env4)
   cycSplit <- basiliskRun(cl, function() {
-    X <- reticulate::import("splitFuncs")
+    path <- system.file("splitFuncs", package = 'SplitStats')
+    X <- reticulate::import_from_path("splitFuncs", path = path)
     X$calcSplits(labels, matrix)
   })
   basiliskStop(cl)

@@ -5,7 +5,7 @@ test_that("internal test package installs correctly", {
     xpath <- basilisk.utils::getEnvironmentDir("SplitStats")
 
     #output <- SplitStats::test()
-    expect_true(file.exists(file.path(xpath, "env")))
+    expect_true(file.exists(file.path(xpath, "env1")))
     #expect_true(file.exists(file.path(xpath, "env2")))
 
 
