@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcPval.R
 \name{getSplits}
 \alias{getSplits}
-\title{Get splits from NNet generated split network}
+\title{Get splits and cycle ordering from NNet generated split network}
 \usage{
 getSplits(labels, matrix)
 }
@@ -15,5 +15,5 @@ getSplits(labels, matrix)
 List of observations in cycle ordering and split objects
 }
 \description{
-Get splits from NNet generated split network
+Get splits and cycle ordering from NNet generated split network
 }

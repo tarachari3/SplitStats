@@ -4,7 +4,23 @@
 \alias{getSplitVis}
 \title{Visualize split network as splits graph}
 \usage{
-getSplitVis(labels, cycle, splits, matrix, outfilePhylo, outfileNexus)
+getSplitVis(
+  labels,
+  cycle,
+  splits,
+  matrix,
+  outfilePhylo,
+  outfileNexus,
+  show = TRUE,
+  width = 1000,
+  height = 800,
+  m_left = 100,
+  m_right = 100,
+  m_top = 100,
+  m_bot = 100,
+  font_size = 12,
+  scale_factor = 5
+)
 }
 \arguments{
 \item{labels}{: Vector of labels for members (observations) in dataset}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcPval.R
 \name{getSplitDist}
 \alias{getSplitDist}
-\title{Get split distances between two groups of observations}
+\title{Get split distances between two groups of observations (members)}
 \usage{
 getSplitDist(labels, queryLabs, refLabs, splits)
 }
@@ -19,5 +19,5 @@ getSplitDist(labels, queryLabs, refLabs, splits)
 Vector of distances from each query input to set of all observations in refLabs
 }
 \description{
-Get split distances between two groups of observations
+Get split distances between two groups of observations (members)
 }

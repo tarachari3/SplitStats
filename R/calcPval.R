@@ -1,13 +1,14 @@
-#' A Function to return raw p-values for feature contribution to a split
+#' Get raw p-values for feature contribution to a split of interest
+#' @return P-values for contribution of feature to split
 #'
-#' @param featureMat Unnamed matrix of observationsxfeature
+#' @param featureMat Unnamed matrix of observationsxfeatures (e.g. membersxvotes)
 #' @param labels Vector of observation labels (e.g. member names)
 #' @param queryLabs Subset of labels vector on one side of split
-#' @return P-values for contribution of feature to split
+#'
 #' @export
 
 # ---------------------- Rank votes by p-value for given split ------------------ (FOR PACKAGE)
-calcSplitVotPval <- function(featureMat,labels, queryLabs) {
+calcVotPval <- function(featureMat,labels, queryLabs) {
 
   bin_names <- as.integer(labels %in% queryLabs)
 
@@ -45,7 +46,7 @@ calcSplitVotPval <- function(featureMat,labels, queryLabs) {
 }
 
 
-#' Get splits from NNet generated split network
+#' Get splits and cycle ordering from NNet generated split network
 #'
 #'
 #'
@@ -70,7 +71,7 @@ getSplits <- function(labels, matrix) {
 }
 
 
-#' Get split distances between two groups of observations
+#' Get split distances between two groups of observations (members)
 #'
 #'
 #'
@@ -112,13 +113,13 @@ getSplitDist <- function(labels, queryLabs, refLabs, splits) {
 #' @export
 #' @importFrom reticulate import
 #' @importFrom basilisk basiliskStart basiliskRun basiliskStop
-getSplitVis <- function(labels,cycle,splits,matrix,outfilePhylo,outfileNexus) {
+getSplitVis <- function(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show=TRUE,width = 1000, height = 800,m_left = 100, m_right = 100, m_top = 100, m_bot = 100, font_size = 12, scale_factor =5) {
 
   cl <- basiliskStart(env4)
   cycSplit <- basiliskRun(cl, function() {
     path <- system.file("splitspy", package = 'SplitStats')
     X <- reticulate::import_from_path("splitspy", path = path)
-    X$makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus)
+    X$makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show,width, height,m_left, m_right, m_top, m_bot, font_size, scale_factor)
   })
   basiliskStop(cl)
 
