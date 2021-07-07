@@ -13,6 +13,7 @@ import math
 from typing import Tuple
 from PIL import Image, ImageDraw, ImageFont
 from splitspy.graph.graph import Graph
+import matplotlib.font_manager as fm
 
 __author__ = 'Daniel H. Huson'
 
@@ -53,11 +54,12 @@ def draw(outfile: str, graph: Graph, label_angles: [float] = None, fit: float = 
 
     im_draw = ImageDraw.Draw(im)
 
-    font = ImageFont.load_default() #ImageFont.truetype("Arial",size=font_size)
+    font = ImageFont.truetype(fm.findfont(fm.FontProperties(family='Arial')),size=font_size)
     black = (0, 0, 0)
 
     if fit != -1:
-        im_draw.text((40*scale_factor, 10*scale_factor), "Fit: " + ("{:.2f}".format(fit)), font=ImageFont.truetype("Arial",size=10*scale_factor), fill=black)
+        im_draw.text((40*scale_factor, 10*scale_factor), "Fit: " + ("{:.2f}".format(fit)), font=ImageFont.truetype(fm.findfont(fm.FontProperties(family='Arial')),size=font_size), fill=black)
+        #ImageFont.truetype("Arial",size=10*scale_factor)
 
     center = (0.5 * width, 0.5 * height)
 
