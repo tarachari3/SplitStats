@@ -53,7 +53,7 @@ def draw(outfile: str, graph: Graph, label_angles: [float] = None, fit: float = 
 
     im_draw = ImageDraw.Draw(im)
 
-    font = ImageFont.truetype("Arial",size=font_size)
+    font = ImageFont.load_default() #ImageFont.truetype("Arial",size=font_size)
     black = (0, 0, 0)
 
     if fit != -1:

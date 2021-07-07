@@ -86,7 +86,7 @@ getSplits <- function(labels, matrix) {
 getSplitDist <- function(labels, queryLabs, refLabs, splits) {
 
   cl <- basiliskStart(env4)
-  cycSplit <- basiliskRun(cl, function() {
+  dists <- basiliskRun(cl, function() {
     path <- system.file("splitspy", package = 'SplitStats')
     X <- reticulate::import_from_path("splitspy", path = path)
     X$splitDists(labels, queryLabs, refLabs, splits)
