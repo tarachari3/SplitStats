@@ -76,7 +76,7 @@ def makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show=True,width
 	fit = distances.ls_fit(matrix, split_dist(len(labels), splits))
 
 	#Draw split network outline
-	draw.draw(outfilePhylo, graph, angles, fit, width, height,m_left, m_right, m_top, m_bot, font_size, scale_factor)
+	draw.draw(outfilePhylo, graph, angles, fit, int(width), int(height),int(m_left), int(m_right), int(m_top), int(m_bot), int(font_size), int(scale_factor))
 
 	#Show plot
 	if show:
