@@ -3,7 +3,7 @@ Type: Package
 Title: Split Network Stats Functions
 Version: 0.1.0
 Author: Tara Chari
-Maintainer: tchari@caltech.edu
+Maintainer: Tara Chari <tarachari3@gmail.com>
 Description: Functions for visualization and analysis of NNet split network output.
 License: What license is it under?
 Encoding: UTF-8
