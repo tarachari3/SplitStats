@@ -119,7 +119,7 @@ getSplitVis <- function(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,sho
   cycSplit <- basiliskRun(cl, function() {
     path <- system.file("splitspy", package = 'SplitStats')
     X <- reticulate::import_from_path("splitspy", path = path)
-    X$makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show,width, height,m_left, m_right, m_top, m_bot, font_size, scale_factor)
+    X$makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show,as.integer(width), as.integer(height),as.integer(m_left), as.integer(m_right), as.integer(m_top), as.integer(m_bot), as.integer(font_size), as.integer(scale_factor))
   })
   basiliskStop(cl)
 
