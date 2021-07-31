@@ -14,8 +14,8 @@ Imports:
     basilisk,
     reticulate
 StagedInstall: no
-Roxygen: list(markdown = TRUE)
 Suggests: 
     rmarkdown,
+    markdown,
     knitr
 VignetteBuilder: knitr
