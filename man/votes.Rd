@@ -7,11 +7,11 @@
 \format{
 A matrix with 98 members by 168 rollcall votes:
 \describe{
-  \item{1}{Matrix of Senate member votes}
+\item{1}{Matrix of Senate member votes}
 }
 }
 \source{
-<https://www.github.com/tarachari3/SplitStats>
+\url{https://www.github.com/tarachari3/SplitStats}
 }
 \usage{
 votes
