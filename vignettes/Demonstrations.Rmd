@@ -1,0 +1,72 @@
+---
+title: "Demonstrations"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Demonstrations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+devtools::install_github("tarachari3/SplitStats")
+library(SplitStats)
+
+#Load example data for Senate Votes in the 116th Senate
+
+#Pairwise distance matrix between Senators with row names for each senator
+head(dists)
+#Vote matrix for Senators, 0-Nay, 1-Yea, 1/2-Abstain
+head(votes)
+```
+
+Get distance matrix (mat) and labels (labels) for each member in the distance matrix:
+
+```{r}
+mat <- dists[1]$Dists
+labels <- dists[2]$Labs
+```
+
+Get circular ordering (cycle) of observations and splits comprising the split network:
+
+```{r}
+d <- getSplits(labels, mat)
+
+cycle <- d[1][[1]]
+print(cycle)
+splits <- d[2][[1]]
+```
+
+Get distance along splits in which a query label is split from the second set of labels:
+Can be used to find distances of senators to the 'center' of the split network, where they are separated from all senators in the opposing party.
+
+```{r}
+dists <- getSplitDist(labels, labels[1:45], labels[46:98], splits)
+```
+
+
+Get visualization of splits graph (outline) and NEXUS (nex) file output for use with the SplitsTree GUI, for more detailed and user-interactive visuals.
+The splits graph outline is described in (Huson et al. 2021) and the SplitsTree GUI in (Huson & Bryant 2006):
+
+```{r}
+getSplitVis(labels,cycle,splits,mat,'splitgraph.pdf','splitnetwork.nex')
+```
+![](https://github.com/pachterlab/CWGFLHGCCHAP_2021/blob/master/browser.png?raw=true "UCSC Browser")
+
+
+Get p-values for votes contributing to a split of interest (e.g. Dem Presidential candidates vs the rest of the Senate members):
+
+```{r}
+#Use original observations x features matrix --> votes object which is members x votes matrix
+
+demCandsPvals <- calcVotPval(votes,labels,c("BOOKER_C_Dem","SANDERS_B_Ind","KLOBUCHAR_A_Dem","WARREN_E_Dem","HARRIS_K_Dem"))
+
+```
+
+

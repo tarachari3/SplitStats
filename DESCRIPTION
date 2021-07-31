@@ -14,3 +14,7 @@ Imports:
     basilisk,
     reticulate
 StagedInstall: no
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
