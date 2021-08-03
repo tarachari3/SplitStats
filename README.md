@@ -55,7 +55,7 @@ Available functions:
 
 1. ``` getSplits(labels, mat)```
 
-Given a pairwise distance matrix _mat_ (obs x obs), and a vector row _labels_ (for each input observation obs), output the **circular ordering** of the observations, the **splits comprising their split network** (including the **weights on each split**).
+Given a pairwise distance matrix _mat_ (obs x obs), and a vector row _labels_ (for each input observation obs), output the circular ordering (_cycle_) of the observations and the splits comprising their split network, _splits_  (including the weights on each split).
 <br /><br />
 
 
