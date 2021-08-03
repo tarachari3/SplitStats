@@ -57,7 +57,7 @@ The splits graph outline is described in (Huson et al. 2021) and the SplitsTree 
 ```{r}
 getSplitVis(labels,cycle,splits,mat,'splitgraph.pdf','splitnetwork.nex')
 ```
-![](https://github.com/tarachari3/SplitStats/blob/main/splitgraph.pdf?raw=true "Split Network Outline")
+![](https://github.com/tarachari3/SplitStats/blob/main/splitgraph.png?raw=true "Split Network Outline")
 
 
 Get p-values for votes contributing to a split of interest (e.g. Dem Presidential candidates vs the rest of the Senate members):
