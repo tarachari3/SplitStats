@@ -34,6 +34,24 @@ getSplitVis(
 \item{outfilePhylo}{: Filename for phylogenetic outline image of splits network}
 
 \item{outfileNexus}{: Filename for NEXUS output of splits network (SplitsTree4/5 compatible)}
+
+\item{show}{: Boolean for showing outline on console}
+
+\item{width}{: Width int}
+
+\item{height}{: Height int}
+
+\item{m_left}{: Restrict width on left by int}
+
+\item{m_right}{: Restrict width on right by int}
+
+\item{m_top}{: Restrict height on top by int}
+
+\item{m_bot}{: Restrict height on bottom by int}
+
+\item{font_size}{: Font size}
+
+\item{scale_factor}{: Scaling outline for image}
 }
 \value{
 Image and NEXUS file output

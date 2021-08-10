@@ -1,4 +1,5 @@
 library(testthat)
 library(SplitStats)
 library(basilisk)
+library(basilisk.utils)
 test_check("SplitStats")
