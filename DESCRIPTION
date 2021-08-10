@@ -18,5 +18,7 @@ Suggests:
     rmarkdown,
     markdown,
     knitr,
-    devtools
+    devtools,
+    basilisk.utils,
+    testthat
 VignetteBuilder: knitr
