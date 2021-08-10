@@ -25,6 +25,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 
 BiocManager::install("basilisk")
 
+install.packages("rmarkdown") 
 install.packages("devtools")
 
 ```
