@@ -6,6 +6,7 @@
 #' @param queryLabs Subset of labels vector on one side of split
 #'
 #' @export
+#' @importFrom stats fisher.test
 
 # ---------------------- Rank votes by p-value for given split ------------------ (FOR PACKAGE)
 calcVotPval <- function(featureMat,labels, queryLabs) {
