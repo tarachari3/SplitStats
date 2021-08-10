@@ -7,12 +7,12 @@
 \format{
 A data frame with 98 rows and 2 variables:
 \describe{
-\item{Dists}{Matrix of pairwise distances}
-\item{Labs}{Row labels for each Senator}
+  \item{Dists}{Matrix of pairwise distances}
+  \item{Labs}{Row labels for each Senator}
 }
 }
 \source{
-\url{https://www.github.com/tarachari3/SplitStats}
+<https://www.github.com/tarachari3/SplitStats>
 }
 \usage{
 dists
