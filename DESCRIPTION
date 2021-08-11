@@ -13,7 +13,6 @@ Depends: R (>= 4.1.0)
 Imports:
     basilisk,
     reticulate
-StagedInstall: no
 Suggests: 
     rmarkdown,
     markdown,
