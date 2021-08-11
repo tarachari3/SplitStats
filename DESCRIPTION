@@ -12,9 +12,9 @@ RoxygenNote: 7.1.1
 Depends: R (>= 4.1.0)
 Imports:
     basilisk,
-    reticulate,
-    rmarkdown
+    reticulate
 Suggests: 
+    rmarkdown,
     markdown,
     knitr,
     devtools,
