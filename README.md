@@ -78,7 +78,7 @@ Pass in a .nex output file as shown above to obtain a SplitsTree GUI compatible 
 
 3. ```calcVotPval(votes, labels, names)```
 
-Ranks the contribution of input features (e.g. votes) to a user-defined split, which separates the specific observation _names_ from the remaining _labels_, by generating raw p-values for each input feature.
+Ranks the contribution of input features (e.g. votes) to a user-defined split by generating raw p-values for each input feature. The split separates the group of observations in _names_, which form a subset of the total input _labels_, from the remaining observations.
 
 <br /><br />
 
