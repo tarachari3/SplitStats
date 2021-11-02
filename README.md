@@ -14,7 +14,7 @@ R (>= 4.1) and Python (>= 3.6) is necessary for analysis:
 
 R can be downloaded [here](https://cran.r-project.org/mirrors.html)
 
-The RStudio IDE can be downloaded [here](https://rstudio.com/products/rstudio/download/)
+The RStudio IDE can be downloaded [here](https://www.rstudio.com/products/rstudio/download/)
 
 ### Initial Setup
 
