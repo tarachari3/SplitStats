@@ -30,4 +30,4 @@ For a CRAN submission we recommend that you fix all NOTEs, WARNINGs and ERRORs.
 
 
 
-* This is the first submission for this package. Note 2 refers to the examples taking longer than 5s to run though these examples are useful for the user to have.
+* NOTE 1 This is the first submission for this package. NOTE 2 refers to the examples taking longer than 5s to run though these examples are more illustrative/useful when run with the size/type of data provided. NOTE 3 does not result in any errors, and there is no .empty file in the SplitStats package.
