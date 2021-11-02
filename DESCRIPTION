@@ -4,7 +4,7 @@ Title: Split Network Stats Functions
 Version: 0.1.0
 Author: Tara Chari
 Maintainer: Tara Chari <tarachari3@gmail.com>
-Description: Functions for visualization and analysis of NNet split network output.
+Description: Functions for visualization and analysis of Neighbor Net split network output.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
