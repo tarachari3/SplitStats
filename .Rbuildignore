@@ -3,4 +3,4 @@
 ^data-raw$
 ^splitgraph.png
 ^cran-comments\.md$
-^*.empty
+^.*empty$
