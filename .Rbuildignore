@@ -4,3 +4,4 @@
 ^splitgraph.png
 ^cran-comments\.md$
 ^.*empty$
+^\.BBSoptions$
