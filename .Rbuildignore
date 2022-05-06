@@ -6,3 +6,5 @@
 ^.*empty$
 ^\.BBSoptions$
 ^\.gitignore$
+^\.travis\.yml$
+^\.github$
