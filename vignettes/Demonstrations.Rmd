@@ -14,17 +14,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-devtools::install_github("tarachari3/SplitStats")
-library(SplitStats)
+#```{r setup}
+#devtools::install_github("tarachari3/SplitStats")
+#library(SplitStats)
 
-#Load example data for Senate Votes in the 116th Senate
+##Load example data for Senate Votes in the 116th Senate
 
-#Pairwise distance matrix between Senators with row names for each senator
-head(dists)
-#Vote matrix for Senators, 0-Nay, 1-Yea, 1/2-Abstain
-head(votes)
-```
+##Pairwise distance matrix between Senators with row names for each senator
+#head(dists)
+##Vote matrix for Senators, 0-Nay, 1-Yea, 1/2-Abstain
+#head(votes)
+#```
 
 #Get distance matrix (mat) and labels (labels) for each member in the distance matrix:
 
