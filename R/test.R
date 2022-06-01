@@ -10,6 +10,7 @@
 #' @export
 #' @importFrom reticulate import
 #' @importFrom basilisk basiliskStart basiliskRun basiliskStop
+\donttest{
 test <- function() {
   cl <- basiliskStart(env4)
   split.names <- basiliskRun(cl, function() {
@@ -21,4 +22,5 @@ test <- function() {
   
 
   list(splitspy=split.names)
+}
 }
