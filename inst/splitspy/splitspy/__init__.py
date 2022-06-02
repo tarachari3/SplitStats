@@ -75,15 +75,17 @@ def makeVis(labels,cycle,splits,matrix,outfilePhylo,outfileNexus,show=True,width
 	#Find non-negative least-squares weights for splits
 	fit = distances.ls_fit(matrix, split_dist(len(labels), splits))
 
-	#Draw split network outline
-	draw.draw(outfilePhylo, graph, angles, fit, int(width), int(height),int(m_left), int(m_right), int(m_top), int(m_bot), int(font_size), int(scale_factor))
+	if len(outfilePhylo) > 0:
+		#Draw split network outline
+		draw.draw(outfilePhylo, graph, angles, fit, int(width), int(height),int(m_left), int(m_right), int(m_top), int(m_bot), int(font_size), int(scale_factor))
 
-	#Show plot
-	if show:
-		Popen('open %s' % outfilePhylo,shell=True)
+		#Show plot
+		if show:
+			Popen('open %s' % outfilePhylo,shell=True)
 
-	#Add code for NEXUS output/SplitsTree5 compatible output
-	splits_io.print_splits_nexus(labels, splits, cycle, fit, filename=outfileNexus)
+	if len(outfileNexus) > 0:
+		#Add code for NEXUS output/SplitsTree5 compatible output
+		splits_io.print_splits_nexus(labels, splits, cycle, fit, filename=outfileNexus)
 
 
 
