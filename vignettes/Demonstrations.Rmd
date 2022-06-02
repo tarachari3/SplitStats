@@ -35,13 +35,13 @@ labels <- dists[2]$Labs
 
 Get circular ordering (cycle) of observations and splits comprising the split network:
 
-#```{r}
-#d <- getSplits(labels, mat)
+```{r}
+d <- getSplits(labels, mat)
 
-#cycle <- d[1][[1]]
-#print(cycle)
-#splits <- d[2][[1]]
-#```
+cycle <- d[1][[1]]
+print(cycle)
+splits <- d[2][[1]]
+```
 
 Get distance along splits in which a query label is split from the second set of labels:
 Can be used to find distances of senators to the 'center' of the split network, where they are separated from all senators in the opposing party.
