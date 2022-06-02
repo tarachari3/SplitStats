@@ -6,7 +6,7 @@
 #' @param queryLabs Subset of labels vector on one side of split
 #'
 #' @examples
-#' featureMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0))
+#' featMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0))
 #' labs <- c('Mouse','Fly','Rat','Zebrafish','Human','Jellyfish')
 #' queries <- c('Mouse','Rat')
 #' pvals <- calcVotPval(featMat,labs,queries)
