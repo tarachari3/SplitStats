@@ -28,10 +28,10 @@ head(votes)
 
 Get distance matrix (mat) and labels (labels) for each member in the distance matrix:
 
-#```{r}
-#mat <- dists[1]$Dists
-#labels <- dists[2]$Labs
-#```
+```{r}
+mat <- dists[1]$Dists
+labels <- dists[2]$Labs
+```
 
 Get circular ordering (cycle) of observations and splits comprising the split network:
 
