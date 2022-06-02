@@ -59,6 +59,14 @@ Image and NEXUS file output
 \description{
 Visualize split network as splits graph
 }
+\examples{
+dists <- dist(cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0)), method = "manhattan",diag=TRUE,upper=TRUE)
+labs <- c('Mouse','Fly','Rat','Zebrafish','Human')
+out <- getSplits(labs, dists)
+splits <- out[2][[1]]
+cycle <- out[1][[1]]
+getSplitVis(labs,cycle,splits,dists,'','')
+}
 \author{
 Tara Chari
 }
