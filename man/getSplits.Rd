@@ -18,7 +18,9 @@ List of observations in cycle ordering and split objects
 Get splits and cycle ordering from NNet generated split network
 }
 \examples{
-dists <- dist(cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0)), method = "manhattan",diag=TRUE,upper=TRUE)
+featMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0))
+ds <- dist(featMat, method = "manhattan",diag=TRUE,upper=TRUE)
+ds <- as.matrix(ds)
 labs <- c('Mouse','Fly','Rat','Zebrafish','Human')
-out <- getSplits(labs, dists)
+out <- getSplits(labs, ds)
 }

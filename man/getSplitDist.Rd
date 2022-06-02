@@ -22,9 +22,11 @@ Vector of distances from each query input to set of all observations in refLabs
 Get split distances between two groups of observations (members)
 }
 \examples{
-dists <- dist(cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0)), method = "manhattan",diag=TRUE,upper=TRUE)
+featMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0))
+ds <- dist(featMat, method = "manhattan",diag=TRUE,upper=TRUE)
+ds <- as.matrix(ds)
 labs <- c('Mouse','Fly','Rat','Zebrafish','Human')
-out <- getSplits(labs, dists)
+out <- getSplits(labs, ds)
 splits <- out[2][[1]]
 sdists <- getSplitDist(labs, labs[1:3], labs[4:6], splits)
 }
