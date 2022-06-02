@@ -7,7 +7,7 @@
 #'
 #' @examples
 #' featMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0),c(0,1,1,0,0))
-#' labs <- c('Mouse','Fly','Rat','Zebrafish','Human','Jellyfish')
+#' labs <- c('Mouse','Fly','Rat','Zebrafish','Human')
 #' queries <- c('Mouse','Rat')
 #' pvals <- calcVotPval(featMat,labs,queries)
 #' @export
