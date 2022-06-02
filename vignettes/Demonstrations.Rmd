@@ -28,44 +28,44 @@ head(votes)
 
 Get distance matrix (mat) and labels (labels) for each member in the distance matrix:
 
-```{r}
-mat <- dists[1]$Dists
-labels <- dists[2]$Labs
-```
+#```{r}
+#mat <- dists[1]$Dists
+#labels <- dists[2]$Labs
+#```
 
 Get circular ordering (cycle) of observations and splits comprising the split network:
 
-```{r}
-d <- getSplits(labels, mat)
+#```{r}
+#d <- getSplits(labels, mat)
 
-cycle <- d[1][[1]]
-print(cycle)
-splits <- d[2][[1]]
-```
+#cycle <- d[1][[1]]
+#print(cycle)
+#splits <- d[2][[1]]
+#```
 
 Get distance along splits in which a query label is split from the second set of labels:
 Can be used to find distances of senators to the 'center' of the split network, where they are separated from all senators in the opposing party.
 
-```{r}
-dists <- getSplitDist(labels, labels[1:45], labels[46:98], splits)
-```
+#```{r}
+#dists <- getSplitDist(labels, labels[1:45], labels[46:98], splits)
+#```
 
 
 Get visualization of splits graph (outline) and NEXUS (nex) file output for use with the SplitsTree GUI, for more detailed and user-interactive visuals.
 The splits graph outline is described in (Huson et al. 2021) and the SplitsTree GUI in (Huson & Bryant 2006):
 
-```{r}
-getSplitVis(labels,cycle,splits,mat,'splitgraph.pdf','splitnetwork.nex')
-```
+#```{r}
+#getSplitVis(labels,cycle,splits,mat,'splitgraph.pdf','splitnetwork.nex')
+#```
 
 
 Get p-values for votes contributing to a split of interest (e.g. Dem Presidential candidates vs the rest of the Senate members):
 
-```{r}
-#Use original observations x features matrix --> votes object which is members x votes matrix
+#```{r}
+##Use original observations x features matrix --> votes object which is members x votes matrix
 
-demCandsPvals <- calcVotPval(votes,labels,c("BOOKER_C_Dem","SANDERS_B_Ind","KLOBUCHAR_A_Dem","WARREN_E_Dem","HARRIS_K_Dem"))
+#demCandsPvals <- calcVotPval(votes,labels,c("BOOKER_C_Dem","SANDERS_B_Ind","KLOBUCHAR_A_Dem","WARREN_E_Dem","HARRIS_K_Dem"))
 
-```
+#```
 
 
