@@ -19,3 +19,9 @@ P-values for contribution of feature to split
 \description{
 Get raw p-values for feature contribution to a split of interest
 }
+\examples{
+featureMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0))
+labs <- c('Mouse','Fly','Rat','Zebrafish','Human','Jellyfish')
+queries <- c('Mouse','Rat')
+pvals <- calcVotPval(featMat,labs,queries)
+}

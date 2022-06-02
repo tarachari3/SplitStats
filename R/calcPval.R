@@ -5,6 +5,11 @@
 #' @param labels Vector of observation labels (e.g. member names)
 #' @param queryLabs Subset of labels vector on one side of split
 #'
+#' @examples
+#' featureMat <- cbind(c(0,1,1,1,1),c(0,0,0,1,1),c(0,1,1,1,1),c(0,1,0,1,1),c(0,0,0,0,0))
+#' labs <- c('Mouse','Fly','Rat','Zebrafish','Human','Jellyfish')
+#' queries <- c('Mouse','Rat')
+#' pvals <- calcVotPval(featMat,labs,queries)
 #' @export
 #' @importFrom stats fisher.test
 
