@@ -46,9 +46,9 @@ splits <- d[2][[1]]
 Get distance along splits in which a query label is split from the second set of labels:
 Can be used to find distances of senators to the 'center' of the split network, where they are separated from all senators in the opposing party.
 
-#```{r}
-#dists <- getSplitDist(labels, labels[1:45], labels[46:98], splits)
-#```
+```{r}
+dists <- getSplitDist(labels, labels[1:45], labels[46:98], splits)
+```
 
 
 Get visualization of splits graph (outline) and NEXUS (nex) file output for use with the SplitsTree GUI, for more detailed and user-interactive visuals.
