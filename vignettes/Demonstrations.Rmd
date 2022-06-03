@@ -64,7 +64,7 @@ Get p-values for votes contributing to a split of interest (e.g. Dem Presidentia
 ```{r}
 #Use original observations x features matrix --> votes object which is members x votes matrix
 
-demCandsPvals <- calcVotPval(votes,labels,c("BOOKER_C_Dem","SANDERS_B_Ind","KLOBUCHAR_A_Dem","WARREN_E_Dem","HARRIS_K_Dem"))
+demCandsPvals <- calcPval(votes,labels,c("BOOKER_C_Dem","SANDERS_B_Ind","KLOBUCHAR_A_Dem","WARREN_E_Dem","HARRIS_K_Dem"))
 
 ```
 
