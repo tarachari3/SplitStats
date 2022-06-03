@@ -1,7 +1,7 @@
 # SplitStats
 
 R Package for Analysis of Neighbor Net (NNet) Generated Split Networks.
-See our split-network analysis of Senate voting data [here] (https://preprints.apsanet.org/engage/apsa/article-details/6091bef5f3923b8c17c431d6). 
+See our split-network analysis of Senate voting data [here](https://preprints.apsanet.org/engage/apsa/article-details/6091bef5f3923b8c17c431d6). 
 
 Split-networks [1] are a common visual analysis tool used in phylogenetics to classify and quantify the evolutionary relationships between biological entities such as groups of organisms. Split-networks generalize phylogenetic trees, to represent the evolutionary histories and hierarchical structures between the entities of interest. Such split-systems have also been extended to visualizing and analyzing various high dimensional data types from single-cell genomics [2] to linguisitics data[3]. Split-networks use distance matrices between entities, based on relevant features such as sequence similarity, gene expression etc, to provide interpretable, low dimensional, and structured representations of the high dimensional data sets.
 
