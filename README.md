@@ -1,3 +1,4 @@
+[![R-CMD-check](https://github.com/tarachari3/SplitStats/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tarachari3/SplitStats/actions/workflows/R-CMD-check.yaml)
 # SplitStats
 
 R Package for Analysis of Neighbor Net (NNet) Generated Split Networks.
