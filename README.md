@@ -1,8 +1,8 @@
 # SplitStats
 
 R Package for Analysis of Neighbor Net (NNet) Generated Split Networks.
-Adapted from the splitspy NNet implementation in [1].
 
+Split-networks [1] are a common visual analysis tool used in phylogenetics to classify and quantify the evolutionary relationships between biological entities such as groups of organisms. Split-networks generalize phylogenetic trees, to represent the evolutionary histories and hierarchical structures between the entities of interest. Such split-systems have also been extended to visualizing and analyzing various high dimensional data types from single-cell genomics [2] to linguisitics data[3]. Split-networks use distance matrices between entities, based on relevant features such as sequence similarity, gene expression etc, to provide interpretable, low dimensional, and structured representations of the high dimensional data sets. We provide an R implementation of the Neighbor Net (NNet) algorithm for constructing split-networks from distance matrices (adapted from the splitspy NNet implementation [4]), as well as statistical tools for determining the contribution of the input features to the generated splits between entities. This helps elucidate biological connections or sub-structures across data types, ranging from genomics to social science datasets, and statistical procedures for interpreting the output structures.
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ devtools::install_github("tarachari3/SplitStats", build_vignettes = TRUE)
 
 ## Running Analysis
 
-To display example vote data and distance matrix:
+To display example vote data and distance matrix, from the records of the 116th US Senate:
 ```R
 library(SplitStats)
 
@@ -68,7 +68,7 @@ Generates a general phylogenetic outline [1] as below:
   <img src="https://github.com/tarachari3/SplitStats/blob/main/splitgraph.png" width="40%" height="40%">
 </p> 
 
-Pass in a .nex output file as shown above to obtain a SplitsTree GUI compatible output (for greater functionality), as below:
+Pass in a .nex output file as shown above to obtain a SplitsTree GUI compatible output (for greater functionality), as below. SplitsTree GUI found [here](https://software-ab.informatik.uni-tuebingen.de/download/splitstree/welcome.html).
 <p align="center">
   <img src="https://github.com/pachterlab/CP_2021/blob/main/116senate.png" width="50%" height="50%">
 </p>
@@ -76,7 +76,7 @@ Pass in a .nex output file as shown above to obtain a SplitsTree GUI compatible 
 <br /><br />
 
 
-3. ```calcVotPval(votes, labels, names)```
+3. ```calcPval(votes, labels, names)```
 
 Ranks the contribution of input features (e.g. votes) to a user-defined split by generating raw p-values for each input feature. The split separates the group of observations in _names_, which form a subset of the total input _labels_, from the remaining observations.
 
@@ -102,4 +102,10 @@ library(help = SplitStats)
 
 ## References
 
-[1] Daniel H. Huson, Caner Bagci, Banu Cetinkaya and David Bryant. Phylogenetic context and the use of phylogenetic outlines. Manuscript in preparation (2021)
+[1] Bryant, David, and Vincent Moulton. 2004. “Neighbor-Net: An Agglomerative Method for the Construction of Phylogenetic Networks.” Molecular Biology and Evolution 21 (2): 255–65.
+
+[2] Zhang, Tengjiao, Yichi Xu, Kaoru Imai, Teng Fei, Guilin Wang, Bo Dong, Tianwei Yu, Yutaka Satou, Weiyang Shi, and Zhirong Bao. 2020. “A Single-Cell Analysis of the Molecular Lineage of Chordate Embryogenesis.” Science Advances 6 (45). https://doi.org/10.1126/sciadv.abc4773.
+
+[3] Bryant, David, Flavia Filimon, and Russell D. Gray. 2005. “Untangling Our Past: Languages, Trees, Splits and Networks.” The Evolution of Cultural Diversity: A Phylogenetic Approach, 67–84.
+
+[4] Bagci, Caner, David Bryant, Banu Cetinkaya, and Daniel H. Huson. 2021. “Microbial Phylogenetic Context Using Phylogenetic Outlines.” Genome Biology and Evolution 13 (9). https://doi.org/10.1093/gbe/evab213.
